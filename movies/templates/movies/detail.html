@@ -1,6 +1,16 @@
 {% extends 'base.html'%}
 
 {% block content%}
+{% if movie.number_in_stock == 0 %}
+<div class="alert alert-danger" role="alert">
+  There are no more {{ movie.title}} remains
+</div>
+{% elif movie.number_in_stock <= 10 %}
+<div class="alert alert-warning" role="alert">
+  Only {{movie.number_in_stock}} {{ movie.title}} remains
+</div>
+{% endif %}
+
   <dl>
     <dt><h2>Title:</h2></dt>
     <dd>{{ movie.title }}</dd>
