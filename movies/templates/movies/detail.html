@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block content%}
+  <dl>
+    <dt><h2>Title:</h2></dt>
+    <dd>{{ movie.title }}</dd>
+    <dt><h2>Genre</h2></dt>
+    <dd>{{ movie.genre}}</dd>
+    <dt><h2>stock</h2></dt>
+    <dd>{{ movie.number_in_stock}}</dd>
+  </dl>
+  <a class='btn btn-primary' href="{% url 'movies:index' %}">Back</a>
+
+{% endblock %}
