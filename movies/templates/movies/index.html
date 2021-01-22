@@ -17,7 +17,15 @@
         <a class='btn btn-outline-primary' href="{% url 'movies:detail' movie.id%}">{{ movie.title }}</a>
       </td>
       <td>{{ movie.genre }}</td>
-      <td>{{ movie.number_in_stock }}</td>
+
+      {% if movie.number_in_stock == 0 %}
+      <td><div class="btn btn-danger">No stocks</div></td>
+      {% else %}
+      <td>
+        {{ movie.number_in_stock }}
+      </td>
+      {% endif %}
+
       <td>{{ movie.daily_rate }}</td>
     </tr>
     {% endfor %}

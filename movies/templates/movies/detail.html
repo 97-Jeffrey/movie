@@ -4,10 +4,13 @@
   <dl>
     <dt><h2>Title:</h2></dt>
     <dd>{{ movie.title }}</dd>
-    <dt><h2>Genre</h2></dt>
+    <dt><h2>Genre:</h2></dt>
     <dd>{{ movie.genre}}</dd>
-    <dt><h2>stock</h2></dt>
+    <dt><h2>Year:</h2></dt>
+    <dd>{{movie.release_year}}</dd>
+    <dt><h2>Stock:</h2></dt>
     <dd>{{ movie.number_in_stock}}</dd>
+ 
   </dl>
   <a class='btn btn-primary' href="{% url 'movies:index' %}">Back</a>
 
