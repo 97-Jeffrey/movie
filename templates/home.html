@@ -3,6 +3,7 @@
 {% block content %} 
 
   <div>
-    This app renders a list of movies, see all  <a href="{% url 'movies:index' %}">movies</a>
+    This app renders a list of movies, user can navigate into each movie to see their name, remaining stocks, daily rate, and which year the movie was played
   </div>
+  <a class='btn btn-primary'href="{% url 'movies:index' %}" style='margin-top:20px'> See All Movies</a>
 {% endblock %}
